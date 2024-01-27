@@ -1,0 +1,19 @@
+.main_bg {
+    background-image: url("/image/main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subtitle {
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.title {
+    color: #FFF;
+    font-family: 'Mulish';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
