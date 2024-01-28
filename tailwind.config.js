@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
+    "./main.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -11,6 +11,7 @@ export default {
         cloudburst: '#1C2752',
         whitesmoke: '#F4F4F4',
         mediumgray: '#7E7E7E',
+        greyGoose: '#D2D2D2'
       },
     },
   },

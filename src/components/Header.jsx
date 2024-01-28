@@ -4,7 +4,7 @@ import HeaderRouters from "./header/HeaderRouters.jsx";
 
 const Header = () => {
     return (
-        <header className={'pb-12 pt-8 container flex flex-col gap-8 items-center'}>
+        <header className={'pb-8 pt-4 container flex flex-col gap-8 items-center'}>
             <div className={'w-full flex items-center justify-between'}>
                 <div className={'flex items-center gap-3 text-xl text-cloudburst'}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48" fill="none">

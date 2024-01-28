@@ -1,0 +1,5 @@
+.choose-block {
+    border: 1px solid #000;
+    background: rgba(28, 39, 82, 0.70);
+    backdrop-filter: blur(12.5px);
+}

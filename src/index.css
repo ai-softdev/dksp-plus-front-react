@@ -193,11 +193,23 @@
 
 body {
     position: relative;
-    overflow: hidden;
     font-family: 'Mulish';
 }
 
 .container {
     max-width:  1250px;
     margin: 0 auto;
+}
+
+.rotate-animation {
+    animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
 }
