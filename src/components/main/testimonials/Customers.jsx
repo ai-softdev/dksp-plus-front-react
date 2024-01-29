@@ -5,6 +5,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const Customers = () => {
     const splideRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0)
 
     const handlePrev = () => {
         if (splideRef.current) {
@@ -19,7 +20,6 @@ const Customers = () => {
     };
 
     const splideOptions = {
-        type   : 'loop',
         cloneStatus: true,
         perPage: 1,
         arrows: false,
@@ -48,8 +48,22 @@ const Customers = () => {
             name: 'Nancy luther',
             city: 'NewYork',
             quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'
+        },
+        {
+            src: '/image/cutomers/1.jpg',
+            name: 'Nancy luther',
+            city: 'NewYork',
+            quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'
         }
     ]
+
+    useEffect(() => {
+        splideRef?.current?.splide?.on('moved', () => {
+            const currentIndex = splideRef?.current?.splide.index
+            const slideLength = splideRef?.current?.splide.length
+            setActiveIndex(currentIndex)
+        })
+    })
 
     return (
         <div className={'py-32 container'}>
@@ -69,7 +83,6 @@ const Customers = () => {
                    className={'!p-0 mt-5'}
                    options={splideOptions}
                    ref={splideRef}
-                   onMove={ (f,s,t) => console.log('move', f, s, t) }
                >
                    {slideList.map((slide, index) => (
                        <SplideSlide key={index}>
@@ -99,12 +112,20 @@ const Customers = () => {
                    ))}
                </Splide>
                <div className={'absolute bottom-5 left-5 flex items-center gap-3'}>
-                   <button onClick={handlePrev} className="w-[50px] h-[50px] bg-gainsboro rounded-full hover:shadow-gainsboro transition-all ease-in-out duration-300">
+                   <button
+                       onClick={handlePrev}
+                       disabled={activeIndex === 0}
+                       className={`w-[50px] h-[50px] rounded-full transition-all ease-in-out duration-300 ${activeIndex === 0 ? 'bg-gainsboro hover:shadow-gainsboro' : 'bg-butterscotch hover:bg-butterscotch'}`}
+                   >
                        <svg className={'m-auto rotate-180'} width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0F0F0F"/>
                        </svg>
                    </button>
-                   <button onClick={handleNext} className="w-[50px] h-[50px] bg-butterscotch rounded-full hover:shadow-butterscotch transition-all ease-in-out duration-300" >
+                   <button
+                       onClick={handleNext}
+                       disabled={activeIndex === slideList.length-1}
+                       className={`w-[50px] h-[50px] rounded-full transition-all ease-in-out duration-300 ${activeIndex === slideList.length-1 ? 'bg-gainsboro hover:shadow-gainsboro' : 'bg-butterscotch hover:bg-butterscotch'}`}
+                   >
                        <svg className={'m-auto'} width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0F0F0F"/>
                        </svg>
