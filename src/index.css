@@ -213,3 +213,21 @@ body {
         transform: rotate(180deg);
     }
 }
+
+.splide__arrow {
+    background: #e5e7eb !important;
+    border-radius: 100% !important;
+    padding: 10px !important;
+}
+
+.splide__arrow svg {
+    fill: #1C2752 !important;
+}
+
+.splide__arrow--next {
+    right: -10px !important;
+}
+
+.splide__arrow--prev {
+    left: -10px !important;
+}
