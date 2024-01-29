@@ -24,7 +24,7 @@ const Banner = () => {
             />
             <a
                 href={'tel:+998999999999'}
-                className={'flex items-center gap-3 font-bold text-whitesmoke mt-4 hover:text-cloudburst w-fit transition-all ease-in-out duration-300'}
+                className={'banner-link flex items-center gap-3 font-bold text-whitesmoke mt-4 hover:text-cloudburst w-fit transition-all ease-in-out duration-300'}
             >
                 <svg className={'fill-white transition-all ease-in-out duration-300'} xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
                     <circle cx="21" cy="21.6757" r="21" fill="white"/>
