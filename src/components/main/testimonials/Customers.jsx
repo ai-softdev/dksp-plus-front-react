@@ -21,6 +21,7 @@ const Customers = () => {
 
     const splideOptions = {
         cloneStatus: true,
+        rewind: false,
         perPage: 1,
         arrows: false,
         pagination: false,
@@ -66,8 +67,7 @@ const Customers = () => {
     })
 
     return (
-        <div className={'py-32 container'}>
-           <div className={'w-6/12 relative'}>
+       <div className={'relative'}>
                <Subtitle
                    svg={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                        <path d="M18.9392 10.5226V20.8376C18.9392 21.1321 18.8812 21.4237 18.7685 21.6957C18.6558 21.9678 18.4906 22.215 18.2824 22.4232C18.0742 22.6314 17.827 22.7966 17.5549 22.9093C17.2828 23.022 16.9913 23.08 16.6968 23.08H3.2424C2.64768 23.08 2.07731 22.8437 1.65678 22.4232C1.23625 22.0027 1 21.4323 1 20.8376V7.3832C1 6.78848 1.23625 6.21812 1.65678 5.79759C2.07731 5.37706 2.64768 5.14081 3.2424 5.14081H12.6313" stroke="#FFB342" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -132,7 +132,6 @@ const Customers = () => {
                    </button>
                </div>
            </div>
-        </div>
     );
 };
 
