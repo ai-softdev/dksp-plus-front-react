@@ -1,10 +1,15 @@
 import React from 'react';
+import {motion} from "framer-motion";
 
 const Services = () => {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, display: "none" }}
+        >
            services
-        </div>
+        </motion.div>
     );
 };
 

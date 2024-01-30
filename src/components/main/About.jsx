@@ -2,6 +2,7 @@ import React from 'react';
 import Subtitle from "../ui/Subtitle.jsx";
 import MainTitle from "../ui/MainTitle.jsx";
 import MainDescription from "../ui/MainDescription.jsx";
+import AnimatedNumbers from "react-animated-numbers";
 
 const About = () => {
     const aboutList = [
@@ -13,7 +14,9 @@ const About = () => {
 
     return (
         <div className={'container grid grid-cols-2 gap-10 py-28 items-center'}>
-            <img src="/image/about.jpg" alt="about"/>
+            <div className={'bg-butterscotch rounded-lg'}>
+                <img className={'-translate-x-2 -translate-y-2 rounded-lg'} src="/image/about.jpg" alt="about"/>
+            </div>
             <div>
                 <Subtitle
                     className={'mb-2'}
@@ -32,10 +35,20 @@ const About = () => {
                     content={`Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt. Interdum et malesuada. <br><br> In pulvinar viverra diam, nec rutrum mauris maximus non. Aenean sed quam tristique, facilisis est ac, interdum velit.`}
                 />
                 <div className={'mt-8 flex items-center gap-10'}>
-                    <div className={'flex flex-col gap-3 bg-whitesmoke w-fit p-8'}>
-                        <span className={'font-black text-6xl text-center text-butterscotch'}>
-                            35
-                        </span>
+                    <div className={'flex flex-col items-center gap-3 bg-whitesmoke w-fit p-8'}>
+                        <AnimatedNumbers
+                            includeComma
+                            transitions={(index) => ({
+                                type: "spring",
+                                duration: index + 0.3,
+                            })}
+                            animateToNumber={35}
+                            fontStyle={{
+                                fontSize: 60,
+                                fontWeight: 800,
+                                color: "#FFB342",
+                            }}
+                        />
                         <p className={'w-[100px] text-xl text-center font-black text-cloudburst'}>
                             Years Of Experiance
                         </p>

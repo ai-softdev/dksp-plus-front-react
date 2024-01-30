@@ -7,6 +7,11 @@ import MainButton from "../../ui/MainButton.jsx";
 
 const Form = ({className, ...props}) => {
     const combinedClasses = `${className}`
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('submiiiit')
+    };
+
     return (
         <div className={combinedClasses}>
             <Subtitle
@@ -20,11 +25,27 @@ const Form = ({className, ...props}) => {
                 className={'!text-[35px] mt-3'}
                 content={'Appointment Form'}
             />
-            <form className={'mt-5 bg-whitesmoke px-[58px] py-[68px] flex flex-col gap-5'}>
-                <MainInput/>
-                <MainInput/>
-                <MainInput/>
-                <MainInput/>
+            <form
+                action="#"
+                onSubmit={handleSubmit}
+                className={'mt-5 bg-whitesmoke px-[58px] py-[68px] flex flex-col gap-5'}
+            >
+                <MainInput
+                    placeholder={'Your Name'}
+                    type={'text'}
+                />
+                <MainInput
+                    placeholder={'Email Address'}
+                    type={'mail'}
+                />
+                <MainInput
+                    placeholder={'Phone Number'}
+                    type={'number'}
+                />
+                <MainInput
+                    placeholder={'Date'}
+                    type={'date'}
+                />
                 <MainTextarea/>
                 <MainButton
                     content={'Submit'}

@@ -21,7 +21,7 @@ const ChooseUs = () => {
             content: 'Business Partner'
         },
         {
-            number: '854+',
+            number: '854',
             content: 'Happy Customers'
         }
     ]
@@ -40,8 +40,8 @@ const ChooseUs = () => {
         }
     ]
     return (
-        <div className={'flex items-center justify-between gap-[70px]'}>
-            <div className={'relative'}>
+        <div className={'flex items-center justify-center gap-[70px]'}>
+            <div className={'w-6/12 relative'}>
                 <img className={'w-full h-full'} src="/image/choose-us.jpg" alt="choose-us"/>
                 <div className={'absolute top-32 left-32 right-32 bottom-32 flex items-center justify-center gap-3 flex-col choose-block'}>
                     {chooseResultList.map((item, index) => (

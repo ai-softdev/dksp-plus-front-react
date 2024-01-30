@@ -1,8 +1,12 @@
 import React from 'react';
 
-const MainInput = () => {
+const MainInput = ({placeholder, type, ...props}) => {
     return (
-        <input className={'w-full border border-gainsboro py-[20px] px-[30px] focus:outline-0'} type="text" placeholder={'Your Name'}/>
+        <input
+            className={'w-full border border-gainsboro py-[20px] px-[30px] focus:outline-butterscotch'}
+            type={type}
+            placeholder={placeholder}
+        />
     );
 };
 

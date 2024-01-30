@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {MAIN_ROUTE, SERVICES_ROUTE} from "../../utils/consts.js";
+import {MAIN_ROUTE, PRICING_ROUTE, PROJECTS_ROUTE, SERVICES_ROUTE} from "../../utils/consts.js";
 import HeaderLink from "./UI/HeaderLink.jsx";
 
 const HeaderRouters = () => {
@@ -10,24 +10,12 @@ const HeaderRouters = () => {
                 path: MAIN_ROUTE
             },
             {
-                name: 'About Us',
-                path: SERVICES_ROUTE
+                name: 'Projects',
+                path: PROJECTS_ROUTE
             },
             {
-                name: 'Pages',
-                path: MAIN_ROUTE
-            },
-            {
-                name: 'Services',
-                path: MAIN_ROUTE
-            },
-            {
-                name: 'Blog',
-                path: MAIN_ROUTE
-            },
-            {
-                name: 'Contact Us',
-                path: MAIN_ROUTE
+                name: 'Pricing',
+                path: PRICING_ROUTE
             }
         ]
     )

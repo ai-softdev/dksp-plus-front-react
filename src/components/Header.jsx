@@ -4,7 +4,7 @@ import HeaderRouters from "./header/HeaderRouters.jsx";
 
 const Header = () => {
     return (
-        <header className={'pb-8 pt-4 container flex flex-col gap-8 items-center'}>
+        <header className={'relative z-[100] pb-8 pt-4 container flex flex-col gap-8 items-center'}>
             <div className={'w-full flex items-center justify-between'}>
                 <div className={'flex items-center gap-3 text-xl text-cloudburst'}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48" fill="none">
@@ -13,8 +13,8 @@ const Header = () => {
                         <path d="M25 15.3936C25 15.8671 24.653 16.25 24.2164 16.25H19.7836C19.3582 16.25 19 15.8671 19 15.3936V1.10642C19 0.632871 19.347 0.25 19.7836 0.25H24.2164C24.6418 0.25 25 0.632871 25 1.10642V15.3936Z" fill="#FFB342"/>
                     </svg>
                     <span className={'font-black'}>
-                    DKSP PLUS
-                </span>
+                        DKSP PLUS
+                    </span>
                 </div>
                 <div className={'flex items-center gap-10'}>
                     <SocialItem

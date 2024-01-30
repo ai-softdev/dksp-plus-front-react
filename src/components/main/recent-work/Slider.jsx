@@ -1,5 +1,6 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import ProjectCard from "../../ui/ProjectCard.jsx";
 const Slider = () => {
     const splideOptions = {
             cloneStatus: true,
@@ -56,15 +57,11 @@ const Slider = () => {
             <Splide options={splideOptions}>
                 {slideList.map((slide, index) => (
                     <SplideSlide>
-                        <div className={'bg-whitesmoke p-3 text-center'}>
-                            <img src={slide.src} alt="gallery"/>
-                            <p className={'font-[800] text-cloudburst pt-4'}>
-                                {slide.title}
-                            </p>
-                            <span className={'text-mediumgray text-sm'}>
-                                {slide.subtitle}
-                            </span>
-                        </div>
+                        <ProjectCard
+                            src={slide.src}
+                            title={slide.title}
+                            subtitle={slide.subtitle}
+                        />
                     </SplideSlide>
                 ))}
             </Splide>

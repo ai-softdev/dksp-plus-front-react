@@ -12,9 +12,11 @@ export default {
         whitesmoke: '#F4F4F4',
         mediumgray: '#7E7E7E',
         greyGoose: '#D2D2D2',
-        gainsboro: '#DDDDDD'
+        gainsboro: '#DDDDDD',
+        dusk: '#4B557D'
       },
       boxShadow: {
+        cloudburst: "0px 0px 8px #1C2752",
         gainsboro: "0px 0px 8px #DDDDDD",
         butterscotch: "0px 0px 8px #FFB342",
       }

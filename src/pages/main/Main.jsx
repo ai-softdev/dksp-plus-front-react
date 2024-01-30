@@ -6,17 +6,26 @@ import Services from "../../components/main/Services.jsx";
 import ChooseUs from "../../components/main/choose-us/ChooseUs.jsx";
 import ResentWork from "../../components/main/recent-work/ResentWork.jsx";
 import Testimonials from "../../components/main/testimonials/Testimonials.jsx";
+import Clients from "../../components/main/clients/Clients.jsx";
+import Footer from "../../components/Footer.jsx";
+import {motion} from "framer-motion";
 
 const Main = () => {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, display: "none" }}
+        >
             <Intro/>
             <About/>
             <Services/>
             <ChooseUs/>
             <ResentWork/>
             <Testimonials/>
-        </div>
+            <Clients/>
+            <Footer/>
+        </motion.div>
     );
 };
 
