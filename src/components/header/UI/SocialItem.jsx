@@ -1,5 +1,6 @@
 import React from 'react';
 import './SocialItem.css'
+import i18n from "../../../locales/i18n.js";
 
 const SocialItem = ({svg, title, subtitle, link, ...props}) => {
     return (
@@ -12,7 +13,7 @@ const SocialItem = ({svg, title, subtitle, link, ...props}) => {
             </div>
             <div className={'flex flex-col'}>
                 <span className={`social-name transition-all ease-in-out duration-300 ${props.isFooter ? 'text-whitesmoke font-[800]' : 'font-[800] text-cloudburst'}`}>
-                    {title}
+                    {i18n.t(title)}
                 </span>
                 <span className={props.isFooter ? 'text-whitesmoke font-[200]' : 'text-mediumgray'}>
                     {subtitle}

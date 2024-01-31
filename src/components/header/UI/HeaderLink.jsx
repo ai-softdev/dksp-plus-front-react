@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, NavLink} from "react-router-dom";
+import i18n from "../../../locales/i18n.js";
 
 const HeaderLink = (props) => {
     return (
@@ -9,7 +10,7 @@ const HeaderLink = (props) => {
                 return `${isActive ? 'underline' : isPending ? "" : ""} font-bold cursor-pointer w-fit"`;
             }}
         >
-            {props.name}
+            {i18n.t(props.name)}
         </NavLink>
     );
 };

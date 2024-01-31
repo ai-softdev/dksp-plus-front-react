@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
+    "chart.js": "^4.4.1",
+    "i18next": "^23.8.1",
     "react": "^18.2.0",
     "react-animated-numbers": "^0.18.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-i18next": "^14.0.1",
+    "react-router-dom": "^6.21.3",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

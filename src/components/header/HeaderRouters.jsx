@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {MAIN_ROUTE, PRICING_ROUTE, PROJECTS_ROUTE, SERVICES_ROUTE} from "../../utils/consts.js";
+import {ANALYSIS_ROUTE, MAIN_ROUTE, PRICING_ROUTE, PROJECTS_ROUTE, SERVICES_ROUTE} from "../../utils/consts.js";
 import HeaderLink from "./UI/HeaderLink.jsx";
+import i18n from "../../locales/i18n.js";
 
 const HeaderRouters = () => {
     const [links, setLinks] = useState(
@@ -16,6 +17,10 @@ const HeaderRouters = () => {
             {
                 name: 'Pricing',
                 path: PRICING_ROUTE
+            },
+            {
+                name: 'Market analysis',
+                path: ANALYSIS_ROUTE
             }
         ]
     )

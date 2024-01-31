@@ -35,7 +35,7 @@ const About = () => {
                     content={`Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt. Interdum et malesuada. <br><br> In pulvinar viverra diam, nec rutrum mauris maximus non. Aenean sed quam tristique, facilisis est ac, interdum velit.`}
                 />
                 <div className={'mt-8 flex items-center gap-10'}>
-                    <div className={'flex flex-col items-center gap-3 bg-whitesmoke w-fit p-8'}>
+                    <div className={'flex flex-col items-center gap-3 bg-whitesmoke w-[200px] p-8'}>
                         <AnimatedNumbers
                             includeComma
                             transitions={(index) => ({

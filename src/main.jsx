@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import './locales/i18n.js'
 import './index.css'
 import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/skyblue';
