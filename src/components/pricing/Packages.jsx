@@ -259,7 +259,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.basic ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :
@@ -274,7 +274,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 bg-white ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.standart ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :
@@ -289,7 +289,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.professional ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :
@@ -315,7 +315,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.basic ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :
@@ -330,7 +330,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 bg-white ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.standart ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :
@@ -345,7 +345,7 @@ const Packages = () => {
                                     <td className={`pt-4 pb-4 ${index+1 === servicesMonthly.length ? '' : 'border-b'}`}>
                                         {item.professional ?
                                             <svg className={'mx-auto'} xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 32 32" fill="none">
-                                                <circle cx="16" cy="16" r="16" fill="#FFB342"/>
+                                                <circle cx="16" cy="16" r="16" fill="#FF7B47"/>
                                                 <path d="M23 11L13.9 22L10 17.875" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                             :

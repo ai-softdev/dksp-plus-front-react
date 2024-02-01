@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        butterscotch: '#FFB342',
+        butterscotch: '#FF7B47',
         cloudburst: '#1C2752',
         whitesmoke: '#F4F4F4',
         mediumgray: '#7E7E7E',
@@ -18,7 +18,8 @@ export default {
       boxShadow: {
         cloudburst: "0px 0px 8px #1C2752",
         gainsboro: "0px 0px 8px #DDDDDD",
-        butterscotch: "0px 0px 8px #FFB342",
+        butterscotch: "0px 0px 8px #FF7B47",
+        // FFB342
       }
     },
   },

@@ -6,7 +6,7 @@ const ProjectsIntro = () => {
     return (
         <div className={'relative py-36 overflow-hidden'}>
             <IntroBg
-                background={`bg-[url('./image/projects.jpg')]`}
+                background={`url('./image/projects.jpg')`}
             />
             <div className="container">
                 <MainTitle

@@ -30,8 +30,8 @@ const PriceSlide = ({price, services, popular, ...props}) => {
                     services.map((item, index) => (
                         <div className={'flex items-center gap-3'}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                                <path d="M17.9561 9.47803C17.9561 4.79745 14.1586 1 9.47803 1C4.79745 1 1 4.79745 1 9.47803C1 14.1586 4.79745 17.9561 9.47803 17.9561C14.1586 17.9561 17.9561 14.1586 17.9561 9.47803Z" stroke="#FFB342" strokeWidth="1.5" strokeMiterlimit="10"/>
-                                <path d="M13.717 5.94531L7.78242 13.0103L5.23901 10.1843" stroke="#FFB342" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M17.9561 9.47803C17.9561 4.79745 14.1586 1 9.47803 1C4.79745 1 1 4.79745 1 9.47803C1 14.1586 4.79745 17.9561 9.47803 17.9561C14.1586 17.9561 17.9561 14.1586 17.9561 9.47803Z" stroke="#FF7B47" strokeWidth="1.5" strokeMiterlimit="10"/>
+                                <path d="M13.717 5.94531L7.78242 13.0103L5.23901 10.1843" stroke="#FF7B47" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                             <p className={'text-mediumgray'}>
                                 {item}

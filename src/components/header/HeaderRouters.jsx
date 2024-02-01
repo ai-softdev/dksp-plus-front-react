@@ -26,7 +26,7 @@ const HeaderRouters = () => {
     )
 
     return (
-        <div className={'w-full bg-butterscotch p-5 flex items-center gap-10 -mb-20'}>
+        <div className={'w-8/12 bg-butterscotch rounded-lg p-5 flex items-center justify-evenly gap-10 -mb-20'}>
             {links.map((link, index) => (
                 <HeaderLink
                     key={index}

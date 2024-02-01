@@ -7,7 +7,7 @@ const HeaderLink = (props) => {
         <NavLink
             to={props.path}
             className={({ isActive, isPending }) => {
-                return `${isActive ? 'underline' : isPending ? "" : ""} font-bold cursor-pointer w-fit"`;
+                return `${isActive ? 'underline' : isPending ? "" : ""} font-bold text-cloudbursts cursor-pointer w-fit"`;
             }}
         >
             {i18n.t(props.name)}

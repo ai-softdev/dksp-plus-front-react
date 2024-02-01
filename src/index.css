@@ -254,7 +254,7 @@ input[type=number] {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #FFB342;
+    background-color: #FF7B47;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px !important;
 }
