@@ -18,31 +18,31 @@ const Packages = () => {
 
     const monthlyPlans = [
         {
-            name: 'Basic Plan',
+            name: 'Базовый план',
             price: 599,
         },
         {
-            name: 'Standard',
+            name: 'Стандартный',
             price: 699,
             popular: true
         },
         {
-            name: 'Professional',
+            name: 'Профессиональный',
             price: 799,
         }
     ]
     const annuallyPlans = [
         {
-            name: 'Basic Plan',
+            name: 'Базовый план',
             price: 1599,
         },
         {
-            name: 'Standard',
+            name: 'Стандартный',
             price: 1699,
             popular: true
         },
         {
-            name: 'Professional',
+            name: 'Профессиональный',
             price: 1799,
         }
     ]
@@ -176,21 +176,21 @@ const Packages = () => {
             <div className="container">
                 <MainTitle
                     className={'text-center'}
-                    content={'Our Packages'}
+                    content={'Наши пакеты'}
                 />
                 <MainDescription
                     className={'mx-auto text-center w-7/12 mt-5'}
-                    content={'Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt.'}
+                    content={'Независимо от того, нужно ли вам стратегическое планирование, оптимизация бизнес-процессов, маркетинговая поддержка или другие услуги, у нас есть пакеты, отвечающие вашим запросам. Изучите наши предложения и найдите оптимальное решение для вашего бизнеса.'}
                 />
                 <div className={'flex items-center justify-center mt-10'}>
                     <PackageButton
                         active={activeMonthly}
-                        content={'Monthly'}
+                        content={'Месячные'}
                         onClicked={handleMonthly}
                     />
                     <PackageButton
                         active={activeAnnually}
-                        content={'Annually'}
+                        content={'Ежегодные'}
                         onClicked={handleAnnually}
                     />
                 </div>
@@ -200,14 +200,14 @@ const Packages = () => {
                             <th className={'p-10 text-start'}>
                                 <MainTitle
                                     className={'text-xl'}
-                                    content={'Services'}
+                                    content={'Услуги'}
                                 />
                             </th>
                             {activeMonthly && monthlyPlans.map((item, index) => (
                                 <th className={`relative px-5 py-10 pt-20 ${item.popular ? '!bg-white' : ''}`}>
                                     {item.popular &&
                                         <span className={'p-3 uppercase bg-butterscotch text-sm absolute top-0 w-full left-0'}>
-                                            popular
+                                            популярный
                                         </span>
                                     }
                                     <p className={'font-black text-cloudburst'}>
@@ -220,7 +220,7 @@ const Packages = () => {
                                         })}
                                     </p>
                                     <span className={'block text-mediumgray font-normal mt-1'}>
-                                        Per Visit Charge
+                                        Плата за посещение
                                     </span>
                                 </th>
                             ))}
@@ -228,7 +228,7 @@ const Packages = () => {
                                 <th className={`relative px-5 py-10 pt-20 ${item.popular ? '!bg-white' : ''}`}>
                                     {item.popular &&
                                         <span className={'p-3 uppercase bg-butterscotch text-sm absolute top-0 w-full left-0'}>
-                                            popular
+                                            популярный
                                         </span>
                                     }
                                     <p className={'font-black text-cloudburst'}>
@@ -241,7 +241,7 @@ const Packages = () => {
                                         })}
                                     </p>
                                     <span className={'block text-mediumgray font-normal mt-1'}>
-                                        Per Visit Charge
+                                        Плата за посещение
                                     </span>
                                 </th>
                             ))}
@@ -367,7 +367,7 @@ const Packages = () => {
                                     <td className={`px-3 ${index === 1 ? 'bg-white' : ''}`}>
                                         <MainButton
                                             className={'w-full'}
-                                            content={'Buy Now'}
+                                            content={'Купить сейчас'}
                                         />
                                     </td>
                                 ))
@@ -377,7 +377,7 @@ const Packages = () => {
                                     <td className={`px-3 ${index === 1 ? 'bg-white' : ''}`}>
                                         <MainButton
                                             className={'w-full'}
-                                            content={'Buy Now'}
+                                            content={'Купить сейчас'}
                                         />
                                     </td>
                                 ))

@@ -5,34 +5,49 @@ const ProjectsList = () => {
     const slideList = [
         {
             src: '/image/gallery/1.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
-        },
-        {
-            src: '/image/gallery/2.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
-        },
-        {
-            src: '/image/gallery/3.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
-        },
-        {
-            src: '/image/gallery/4.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
         },
         {
             src: '/image/gallery/1.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
         },
         {
             src: '/image/gallery/1.jpg',
-            title: 'Interior/Exterior Services',
-            subtitle: 'Electric, Instalation'
-        }
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
+        {
+            src: '/image/gallery/1.jpg',
+            title: 'Стратегическое планирование',
+            subtitle: 'Разработка стратегии роста и диверсификации для компании.'
+        },
     ]
     return (
         <div className={'py-28'}>

@@ -62,8 +62,8 @@ const ChooseUs = () => {
                     content={'Почему именно мы'}
                 />
                 <MainTitle
-                    className={'max-w-[500px] mt-5'}
-                    content={'Причины по которым Вам следует выбрать нас'}
+                    className={'max-w-[600px] mt-5'}
+                    content={'Почему наша компания - лучший выбор для консалтинга'}
                 />
                 <MainDescription
                     className={'max-w-[640px] mt-5'}

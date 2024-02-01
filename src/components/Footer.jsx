@@ -89,7 +89,7 @@ const Footer = () => {
                                 <path d="M25.7949 28L34.7949 35L43.7949 28" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>}
                             link={'mailto:Info@Example.com'}
-                            title={'Mail Us'}
+                            title={'Mail Us!'}
                             subtitle={'Info@Example.com'}
                             isFooter={true}
                         />
@@ -99,7 +99,7 @@ const Footer = () => {
                                 <path d="M48.0458 40.8062C47.1296 39.8832 44.9107 38.5361 43.8342 37.9933C42.4322 37.2871 42.3168 37.2294 41.2149 38.0481C40.4799 38.5944 39.9912 39.0824 39.131 38.899C38.2708 38.7155 36.4015 37.6811 34.7647 36.0497C33.128 34.4182 32.0335 32.4948 31.8495 31.6376C31.6654 30.7803 32.1616 30.2974 32.7028 29.5607C33.4655 28.5223 33.4078 28.3492 32.7558 26.9474C32.2475 25.857 30.8612 23.6591 29.9346 22.7476C28.9434 21.7686 28.9434 21.9416 28.3048 22.207C27.7848 22.4258 27.286 22.6917 26.8145 23.0014C25.8914 23.6146 25.3791 24.124 25.0208 24.8896C24.6626 25.6551 24.5016 27.4499 26.3518 30.8109C28.2021 34.1719 29.5002 35.8905 32.187 38.5696C34.8738 41.2487 36.9398 42.6892 39.96 44.383C43.6963 46.4754 45.1294 46.0675 45.8973 45.7098C46.6652 45.3522 47.177 44.8445 47.7914 43.9215C48.1019 43.4508 48.3685 42.9526 48.5876 42.4331C48.8535 41.7967 49.0266 41.7967 48.0458 40.8062Z" stroke="#1C2752" strokeWidth="2" strokeMiterlimit="10"/>
                             </svg>}
                             link={'tel:+9989999999999'}
-                            title={'Call Us'}
+                            title={'Call Us!'}
                             subtitle={'+9989 99 999-99-99'}
                             isFooter={true}
                         />
@@ -119,7 +119,7 @@ const Footer = () => {
                 <div className={'mt-8 flex'}>
                     <div className={'pr-10 border-r border-dusk'}>
                         <span className={'text-whitesmoke font-[200]'}>
-                            Denouncing pleasure and praising pain was born and I will givg you a coghmplete acchount of the system, and expound the actual
+                            Обратитесь к нашим контактным данным и узнайте больше о наших услугах по консалтингу. Мы стремимся быть вашим надежным партнером в реализации бизнес-проектов и достижении ваших целей.
                         </span>
                         <div className={'mt-12 flex  gap-4'}>
                             {socialsLinks.map((item, index)=> (
