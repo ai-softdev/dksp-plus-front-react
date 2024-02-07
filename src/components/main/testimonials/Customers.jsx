@@ -33,25 +33,25 @@ const Customers = () => {
     }
     const slideList = [
         {
-            src: '/image/cutomers/1.jpg',
+            src: '/image/cutomers/1.webp',
             name: 'Nancy luther',
             city: 'NewYork',
             quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'
         },
         {
-            src: '/image/cutomers/1.jpg',
+            src: '/image/cutomers/1.webp',
             name: 'Nancy luther',
             city: 'NewYork',
             quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'
         },
         {
-            src: '/image/cutomers/1.jpg',
+            src: '/image/cutomers/1.webp',
             name: 'Nancy luther',
             city: 'NewYork',
             quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'
         },
         {
-            src: '/image/cutomers/1.jpg',
+            src: '/image/cutomers/1.webp',
             name: 'Nancy luther',
             city: 'NewYork',
             quote: 'Pellentesque vehicula eros neque, maximus mattis est sagittis facilisi.”In sed pretium metus”. Ppretium id urna sit amet tincidunt. Lorem ipsum dolor sit amet,tristique. Duis cursus,in elementum tristique'

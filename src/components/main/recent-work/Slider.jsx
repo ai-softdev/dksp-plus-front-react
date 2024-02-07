@@ -26,27 +26,27 @@ const Slider = () => {
     }
     const slideList = [
         {
-            src: '/image/gallery/1.jpg',
+            src: '/image/gallery/1.webp',
             title: 'Стратегическое планирование',
             subtitle: 'Разработка стратегии роста и диверсификации для компании'
         },
         {
-            src: '/image/gallery/1.jpg',
+            src: '/image/gallery/1.webp',
             title: 'Стратегическое планирование',
             subtitle: 'Разработка стратегии роста и диверсификации для компании'
         },
         {
-            src: '/image/gallery/1.jpg',
+            src: '/image/gallery/1.webp',
             title: 'Стратегическое планирование',
             subtitle: 'Разработка стратегии роста и диверсификации для компании'
         },
         {
-            src: '/image/gallery/1.jpg',
+            src: '/image/gallery/1.webp',
             title: 'Стратегическое планирование',
             subtitle: 'Разработка стратегии роста и диверсификации для компании'
         },
         {
-            src: '/image/gallery/1.jpg',
+            src: '/image/gallery/1.webp',
             title: 'Стратегическое планирование',
             subtitle: 'Разработка стратегии роста и диверсификации для компании'
         }

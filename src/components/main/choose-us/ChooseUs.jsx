@@ -42,7 +42,7 @@ const ChooseUs = () => {
     return (
         <div className={'flex items-center justify-center gap-[70px]'}>
             <div className={'w-6/12 relative'}>
-                <img className={'w-full h-full'} src="/image/choose-us.jpg" alt="choose-us"/>
+                <img className={'w-full h-full'} src="/image/choose-us.webp" alt="choose-us"/>
                 <div className={'absolute top-32 left-32 right-32 bottom-32 flex items-center justify-center gap-3 flex-col choose-block'}>
                     {chooseResultList.map((item, index) => (
                         <ChooseResult

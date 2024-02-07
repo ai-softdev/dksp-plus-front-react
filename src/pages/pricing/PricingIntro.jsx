@@ -6,7 +6,7 @@ const PricingIntro = () => {
     return (
         <div className={'relative py-36 overflow-hidden'}>
             <IntroBg
-                background={`url('./image/pricing.jpg')`}
+                background={`url('./image/pricing.webp')`}
             />
             <div className="container">
                 <MainTitle

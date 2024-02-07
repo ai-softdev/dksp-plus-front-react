@@ -15,7 +15,7 @@ const About = () => {
     return (
         <div className={'container grid grid-cols-2 gap-10 py-28 items-center'}>
             <div className={'bg-butterscotch rounded-lg'}>
-                <img className={'-translate-x-2 -translate-y-2 rounded-lg'} src="/image/about.jpg" alt="about"/>
+                <img className={'-translate-x-2 -translate-y-2 rounded-lg'} src="/image/about.webp" alt="about"/>
             </div>
             <div>
                 <Subtitle
