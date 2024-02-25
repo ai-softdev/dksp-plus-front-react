@@ -3,10 +3,13 @@ import SocialItem from "./header/UI/SocialItem.jsx";
 import HeaderRouters from "./header/HeaderRouters.jsx";
 import i18n from "../locales/i18n.js";
 import {CSSTransition} from "react-transition-group";
+import {motion } from "framer-motion";
 
 const Header = () => {
     const [showLanguage, setShowLanguage] = useState(false)
     const languageRef = useRef(null);
+    const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+    const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
 
     function changeShowLanguage() {
         setShowLanguage(!showLanguage);
@@ -31,58 +34,89 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            // Проверяем, проскроллили ли выше высоты первой секции
+            const section1Height = document.getElementById('intro').offsetHeight;
+            const headerHeight = document.getElementById('header').offsetHeight;
+            if (window.pageYOffset > section1Height) {
+                setIsHeaderFixed(true);
+            } else {
+                setIsHeaderFixed(false);
+            }
+
+            if(window.pageYOffset > headerHeight){
+                setIsHeaderScrolled(true)
+            } else {
+                setIsHeaderScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Очистка слушателя событий при размонтировании компонента
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={'relative z-[100] pb-8 pt-4 container flex flex-col gap-8 items-center'}>
-            <div className={'w-full flex items-center justify-between'}>
+        <motion.header
+            id={'header'}
+            className={`${isHeaderFixed ? 'bg-opacity-50' : ''}  w-full top-0 left-0 right-0 bg-white z-[100] py-2 flex flex-col gap-8 items-center transition-all ease-in-out duration-300`}
+            initial={{ position: 'absolute', top: 0, left: 0, right: 0, y: 0 }}
+            animate={{ position: isHeaderScrolled ? isHeaderFixed ? 'fixed' : 'absolute' : 'absolute', y: isHeaderScrolled ? isHeaderFixed ? 0 : -100 : 0 }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+        >
+            <div className={'container w-full flex items-center justify-between'}>
                 <div className={'flex items-center gap-3 text-xl text-cloudburst'}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="48" viewBox="0 0 44 48" fill="none">
-                        <path d="M39.0644 29.848L44 29.848L44 25.75L29.733 25.75C29.4735 30.0021 25.9028 33.376 21.5381 33.376C17.1734 33.376 13.6027 30.0021 13.3432 25.75L-1.71502e-05 25.75L-1.75084e-05 29.848L4.07406 29.848C4.29203 30.6902 4.57747 31.517 4.92001 32.3284C5.30925 33.2425 5.77116 34.1155 6.30572 34.9423L2.74025 38.4703L8.35573 44.0268L11.9264 40.4937C12.7516 41.0124 13.6235 41.4643 14.5317 41.8443C15.5541 42.2705 16.6077 42.6043 17.682 42.8354L17.682 47.75L25.6329 47.75L25.6329 42.7943C26.645 42.5633 27.6362 42.2449 28.6015 41.8443C29.5773 41.4386 30.5062 40.9507 31.3833 40.3859L34.8917 43.8574L40.5124 38.2957L36.9469 34.7677C37.4348 33.9923 37.8552 33.1758 38.2184 32.3284C38.561 31.517 38.8464 30.6902 39.0644 29.848Z" fill="#1C2752"/>
-                        <path d="M36.9436 7.92054V16.1955C36.9436 16.7571 36.4796 17.2127 35.9078 17.2127H35.1741C34.6022 17.2127 34.1383 16.7571 34.1383 16.1955V5.76968C32.0127 4.38169 29.6282 3.34334 27.0711 2.75V17.1067C27.0711 17.6683 26.6071 18.1239 26.0353 18.1239H17.9431C17.3712 18.1239 16.9073 17.6683 16.9073 17.1067V2.75C14.3825 3.34334 11.998 4.39228 9.87248 5.76968V16.1955C9.87248 16.7571 9.40853 17.2127 8.83668 17.2127H8.10299C7.53114 17.2127 7.06718 16.7571 7.06718 16.1955V7.92054C2.72977 11.862 0 17.4881 0 23.75H44C44.0108 17.4881 41.2918 11.862 36.9436 7.92054Z" fill="#FF7B47"/>
-                        <path d="M25 15.3936C25 15.8671 24.653 16.25 24.2164 16.25H19.7836C19.3582 16.25 19 15.8671 19 15.3936V1.10642C19 0.632871 19.347 0.25 19.7836 0.25H24.2164C24.6418 0.25 25 0.632871 25 1.10642V15.3936Z" fill="#FF7B47"/>
-                    </svg>
-                    <span className={'font-black'}>
-                        DKSP PLUS
-                    </span>
+                    <img className={'w-[250px] h-[80px]'} src="/image/logo-light-long.png" alt="logo"/>
                 </div>
                 <div className={'flex items-center gap-10'}>
-                    <SocialItem
-                        svg={<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 69 68" fill="none">
-                            <circle cx="34.7949" cy="34" r="34" fill="#FF7B47"/>
-                            <path d="M45.2949 24H24.2949C22.9142 24 21.7949 25.1193 21.7949 26.5V41.5C21.7949 42.8807 22.9142 44 24.2949 44H45.2949C46.6756 44 47.7949 42.8807 47.7949 41.5V26.5C47.7949 25.1193 46.6756 24 45.2949 24Z" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M25.7949 28L34.7949 35L43.7949 28" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>}
-                        link={'mailto:Info@Example.com'}
-                        title={'Mail Us!'}
-                        subtitle={'Info@Example.com'}
-                    />
-                    <SocialItem
-                        svg={<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 69 68" fill="none">
-                            <circle cx="34.7949" cy="34" r="34" fill="#FF7B47"/>
-                            <path d="M48.0458 40.8062C47.1296 39.8832 44.9107 38.5361 43.8342 37.9933C42.4322 37.2871 42.3168 37.2294 41.2149 38.0481C40.4799 38.5944 39.9912 39.0824 39.131 38.899C38.2708 38.7155 36.4015 37.6811 34.7647 36.0497C33.128 34.4182 32.0335 32.4948 31.8495 31.6376C31.6654 30.7803 32.1616 30.2974 32.7028 29.5607C33.4655 28.5223 33.4078 28.3492 32.7558 26.9474C32.2475 25.857 30.8612 23.6591 29.9346 22.7476C28.9434 21.7686 28.9434 21.9416 28.3048 22.207C27.7848 22.4258 27.286 22.6917 26.8145 23.0014C25.8914 23.6146 25.3791 24.124 25.0208 24.8896C24.6626 25.6551 24.5016 27.4499 26.3518 30.8109C28.2021 34.1719 29.5002 35.8905 32.187 38.5696C34.8738 41.2487 36.9398 42.6892 39.96 44.383C43.6963 46.4754 45.1294 46.0675 45.8973 45.7098C46.6652 45.3522 47.177 44.8445 47.7914 43.9215C48.1019 43.4508 48.3685 42.9526 48.5876 42.4331C48.8535 41.7967 49.0266 41.7967 48.0458 40.8062Z" stroke="#1C2752" strokeWidth="2" strokeMiterlimit="10"/>
-                        </svg>}
-                        link={'tel:+9989999999999'}
-                        title={'Call Us!'}
-                        subtitle={'+9989 99 999-99-99'}
-                    />
+                    {/*<SocialItem*/}
+                    {/*    svg={<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 69 68" fill="none">*/}
+                    {/*        <circle cx="34.7949" cy="34" r="34" fill="#FF7B47"/>*/}
+                    {/*        <path d="M45.2949 24H24.2949C22.9142 24 21.7949 25.1193 21.7949 26.5V41.5C21.7949 42.8807 22.9142 44 24.2949 44H45.2949C46.6756 44 47.7949 42.8807 47.7949 41.5V26.5C47.7949 25.1193 46.6756 24 45.2949 24Z" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>*/}
+                    {/*        <path d="M25.7949 28L34.7949 35L43.7949 28" stroke="#1C2752" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>*/}
+                    {/*    </svg>}*/}
+                    {/*    link={'mailto:Info@Example.com'}*/}
+                    {/*    title={'Mail Us!'}*/}
+                    {/*    subtitle={'Info@Example.com'}*/}
+                    {/*/>*/}
+                    {/*<SocialItem*/}
+                    {/*    svg={<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 69 68" fill="none">*/}
+                    {/*        <circle cx="34.7949" cy="34" r="34" fill="#FF7B47"/>*/}
+                    {/*        <path d="M48.0458 40.8062C47.1296 39.8832 44.9107 38.5361 43.8342 37.9933C42.4322 37.2871 42.3168 37.2294 41.2149 38.0481C40.4799 38.5944 39.9912 39.0824 39.131 38.899C38.2708 38.7155 36.4015 37.6811 34.7647 36.0497C33.128 34.4182 32.0335 32.4948 31.8495 31.6376C31.6654 30.7803 32.1616 30.2974 32.7028 29.5607C33.4655 28.5223 33.4078 28.3492 32.7558 26.9474C32.2475 25.857 30.8612 23.6591 29.9346 22.7476C28.9434 21.7686 28.9434 21.9416 28.3048 22.207C27.7848 22.4258 27.286 22.6917 26.8145 23.0014C25.8914 23.6146 25.3791 24.124 25.0208 24.8896C24.6626 25.6551 24.5016 27.4499 26.3518 30.8109C28.2021 34.1719 29.5002 35.8905 32.187 38.5696C34.8738 41.2487 36.9398 42.6892 39.96 44.383C43.6963 46.4754 45.1294 46.0675 45.8973 45.7098C46.6652 45.3522 47.177 44.8445 47.7914 43.9215C48.1019 43.4508 48.3685 42.9526 48.5876 42.4331C48.8535 41.7967 49.0266 41.7967 48.0458 40.8062Z" stroke="#1C2752" strokeWidth="2" strokeMiterlimit="10"/>*/}
+                    {/*    </svg>}*/}
+                    {/*    link={'tel:+9989999999999'}*/}
+                    {/*    title={'Call Us!'}*/}
+                    {/*    subtitle={'+9989 99 999-99-99'}*/}
+                    {/*/>*/}
                     <div className={'relative'} ref={languageRef}>
-                        <svg
-                            onClick={changeShowLanguage}
-                            className={`cursor-pointer rounded-full hover:shadow-butterscotch transition-all ease-in-out duration-300 ${showLanguage ? 'rotate-180 shadow-butterscotch' : ''}`}
-                            width="30px"
-                            height="30px"
-                            viewBox="0 0 24 24"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-labelledby="languageIconTitle"
-                            stroke="#000000"
-                            strokeWidth="1"
-                            strokeLinecap="square"
-                            strokeLinejoin="miter"
-                            fill="none"
-                            color="#000000">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path strokeLinecap="round" d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"/> <path strokeLinecap="round" d="M2.5 9L21.5 9M2.5 15L21.5 15"/>
-                        </svg>
+                        <motion.button
+                            whileHover={{ scale: 1.3 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <svg
+                                onClick={changeShowLanguage}
+                                className={`cursor-pointer rounded-full hover:shadow-butterscotch transition-all ease-in-out duration-300 ${showLanguage ? 'rotate-180 shadow-butterscotch' : ''}`}
+                                width="30px"
+                                height="30px"
+                                viewBox="0 0 24 24"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-labelledby="languageIconTitle"
+                                stroke="#000000"
+                                strokeWidth="1"
+                                strokeLinecap="square"
+                                strokeLinejoin="miter"
+                                fill="none"
+                                color="#000000">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path strokeLinecap="round" d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"/> <path strokeLinecap="round" d="M2.5 9L21.5 9M2.5 15L21.5 15"/>
+                            </svg>
+                        </motion.button>
+
                         <CSSTransition
                             in={showLanguage}
                             timeout={300}
@@ -171,8 +205,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <HeaderRouters/>
-        </header>
+            {/*<HeaderRouters/>*/}
+        </motion.header>
     );
 };
 

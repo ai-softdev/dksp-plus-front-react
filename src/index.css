@@ -201,6 +201,10 @@ body {
     margin: 0 auto;
 }
 
+header {
+    backdrop-filter: blur(20px);
+}
+
 .rotate-animation {
     animation: rotate 3s infinite;
 }

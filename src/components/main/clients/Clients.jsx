@@ -1,14 +1,23 @@
 import React from 'react';
-import Subtitle from "../../ui/Subtitle.jsx";
-import MainTitle from "../../ui/MainTitle.jsx";
-import ClientsSlider from "./ClientsSlider.jsx";
+import Subtitle, {MSubtitle} from "../../ui/Subtitle.jsx";
+import MainTitle, {MotionMainTitle} from "../../ui/MainTitle.jsx";
+import ClientsSlider, {MClientSlider} from "./ClientsSlider.jsx";
 import './Clients.css'
+import {motion} from "framer-motion";
+import {textLeftAnimation, textTopAnimation} from "../../../utils/consts.js";
 
 const Clients = () => {
     return (
-        <div className={'py-20'}>
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3 }}
+            className={'py-20'}
+        >
             <div className={'container'}>
-                <Subtitle
+                <MSubtitle
+                    variants={textTopAnimation}
+                    custom={1}
                     className={'mx-auto'}
                     svg={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path d="M19.3591 10.5226V20.8376C19.3591 21.1321 19.3011 21.4237 19.1884 21.6958C19.0757 21.9678 18.9105 22.215 18.7023 22.4233C18.4941 22.6315 18.2469 22.7967 17.9748 22.9093C17.7028 23.022 17.4112 23.08 17.1167 23.08H3.66232C3.0676 23.08 2.49724 22.8438 2.0767 22.4233C1.65617 22.0027 1.41992 21.4324 1.41992 20.8376V7.38327C1.41992 6.78855 1.65617 6.21818 2.0767 5.79765C2.49724 5.37712 3.0676 5.14087 3.66232 5.14087H13.0512" stroke="#FF7B47" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -16,15 +25,19 @@ const Clients = () => {
                     </svg>}
                     content={'Клиенты'}
                 />
-                <MainTitle
+                <MotionMainTitle
+                    variants={textLeftAnimation}
+                    custom={2}
                     className={'text-center mt-5'}
                     content={'Наши надежные клиенты!'}
                 />
-                <ClientsSlider
+                <MClientSlider
+                    variants={textTopAnimation}
+                    custom={3}
                     className={'mt-10'}
                 />
             </div>
-        </div>
+        </motion.section>
     );
 };
 

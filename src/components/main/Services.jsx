@@ -1,8 +1,10 @@
 import React from 'react';
-import Subtitle from "../ui/Subtitle.jsx";
-import MainTitle from "../ui/MainTitle.jsx";
-import MainDescription from "../ui/MainDescription.jsx";
-import ServicesCard from "./services/ServicesCard.jsx";
+import Subtitle, {MSubtitle} from "../ui/Subtitle.jsx";
+import MainTitle, {MotionMainTitle} from "../ui/MainTitle.jsx";
+import MainDescription, {MotionMainDescription} from "../ui/MainDescription.jsx";
+import ServicesCard, {MServicesCard} from "./services/ServicesCard.jsx";
+import {textLeftAnimation, textRightAnimation, textTopAnimation} from "../../utils/consts.js";
+import {motion} from "framer-motion";
 
 const Services = () => {
     const servicesList = [
@@ -39,9 +41,16 @@ const Services = () => {
     ]
 
     return (
-        <div className={'bg-whitesmoke'}>
+        <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3 }}
+            className={'bg-whitesmoke'}
+        >
             <div className={'container py-20'}>
-                <Subtitle
+                <MSubtitle
+                    variants={textTopAnimation}
+                    custom={1}
                     className={'!bg-white mx-auto'}
                     svg={<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M18 9.1V18.875C18 19.1541 17.945 19.4304 17.8382 19.6882C17.7315 19.946 17.5749 20.1803 17.3776 20.3776C17.1803 20.5749 16.946 20.7315 16.6882 20.8382C16.4304 20.945 16.1541 21 15.875 21H3.125C2.56141 21 2.02091 20.7761 1.6224 20.3776C1.22388 19.9791 1 19.4386 1 18.875V6.125C1 5.56141 1.22388 5.02091 1.6224 4.6224C2.02091 4.22388 2.56141 4 3.125 4H12.0224" stroke="#FF7B47" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -49,17 +58,23 @@ const Services = () => {
                     </svg>}
                     content={'Наши услуги'}
                 />
-                <MainTitle
+                <MotionMainTitle
+                    variants={textTopAnimation}
+                    custom={2}
                     className={'text-center'}
                     content={'Наши услуги'}
                 />
-                <MainDescription
+                <MotionMainDescription
+                    variants={textTopAnimation}
+                    custom={3}
                     className={'w-[680px] text-center mx-auto mt-5'}
                     content={'Мы предлагаем разнообразные услуги, ориентированные на достижение ваших бизнес-целей. Мы специализируемся на консалтинге, стратегическом планировании, управлении проектами, разработке бизнес-моделей и многом другом.'}
                 />
                 <div className={'grid grid-cols-3 grid-rows-2 gap-4 mt-10'}>
                     {servicesList.map((item, index) => (
-                        <ServicesCard
+                        <MServicesCard
+                            variants={textLeftAnimation}
+                            custom={index +1}
                             key={index}
                             svg={item.svg}
                             title={item.title}
@@ -68,7 +83,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.section>
     );
 };
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-const ClientsSlider = ({className, ...props}) => {
+import {forwardRef} from "react";
+import {motion} from "framer-motion";
+
+const ClientsSlider = forwardRef(({className, ...props}, ref) => {
     const splideOptions = {
         type: 'loop',
         cloneStatus: true,
@@ -22,7 +25,10 @@ const ClientsSlider = ({className, ...props}) => {
     ]
 
     return (
-        <div className={className}>
+        <div
+            ref={ref}
+            className={className}
+        >
             <Splide
                 className={'!p-0 mt-5'}
                 options={splideOptions}
@@ -35,6 +41,7 @@ const ClientsSlider = ({className, ...props}) => {
             </Splide>
         </div>
     );
-};
+});
 
 export default ClientsSlider;
+export const MClientSlider = motion(ClientsSlider)

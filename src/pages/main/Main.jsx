@@ -8,9 +8,10 @@ import ResentWork from "../../components/main/recent-work/ResentWork.jsx";
 import Testimonials from "../../components/main/testimonials/Testimonials.jsx";
 import Clients from "../../components/main/clients/Clients.jsx";
 import Footer from "../../components/Footer.jsx";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 
 const Main = () => {
+    const { scrollYProgress } = useScroll()
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -21,7 +22,7 @@ const Main = () => {
             <About/>
             <Services/>
             <ChooseUs/>
-            <ResentWork/>
+            {/*<ResentWork/>*/}
             <Testimonials/>
             <Clients/>
             <Footer/>
