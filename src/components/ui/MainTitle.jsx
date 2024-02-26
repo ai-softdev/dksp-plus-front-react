@@ -6,7 +6,7 @@ import {motion} from "framer-motion";
 
 const MainTitle = forwardRef(({content, className, ...props}, ref) => {
     const {t, i18n} = useTranslation()
-    const combinedClasses = `font-[800] text-[45px] text-cloudburst ${className}`
+    const combinedClasses = `font-[800] text-[45px] text-cloudburst max_sm:text-[30px] ${className}`
     return (
         <h3 ref={ref} className={combinedClasses}>
             {t(content)}

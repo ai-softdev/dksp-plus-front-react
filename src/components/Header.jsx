@@ -63,14 +63,14 @@ const Header = () => {
     return (
         <motion.header
             id={'header'}
-            className={`${isHeaderFixed ? 'bg-opacity-50' : ''}  w-full top-0 left-0 right-0 bg-white z-[100] py-2 flex flex-col gap-8 items-center transition-all ease-in-out duration-300`}
+            className={`${isHeaderFixed ? 'bg-opacity-50' : ''}  w-full top-0 left-0 right-0 bg-white z-[100] py-3 flex flex-col gap-8 items-center transition-all ease-in-out duration-300 px-10 max_sm:px-0`}
             initial={{ position: 'absolute', top: 0, left: 0, right: 0, y: 0 }}
             animate={{ position: isHeaderScrolled ? isHeaderFixed ? 'fixed' : 'absolute' : 'absolute', y: isHeaderScrolled ? isHeaderFixed ? 0 : -100 : 0 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
         >
             <div className={'container w-full flex items-center justify-between'}>
                 <div className={'flex items-center gap-3 text-xl text-cloudburst'}>
-                    <img className={'w-[250px] h-[80px]'} src="/image/logo-light-long.png" alt="logo"/>
+                    <img className={'w-[210px] h-[60px] max_sm:w-[200px] max_sm:h-[60px]'} src="/image/logo-light-long.png" alt="logo"/>
                 </div>
                 <div className={'flex items-center gap-10'}>
                     {/*<SocialItem*/}

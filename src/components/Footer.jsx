@@ -4,8 +4,10 @@ import FooterSocialLink from "./footer/FooterSocialLink.jsx";
 import FooterPageLink from "./footer/FooterPageLink.jsx";
 import {motion} from "framer-motion";
 import {textTopAnimation} from "../utils/consts.js";
+import {useTranslation} from "react-i18next";
 
 const Footer = () => {
+    const {t, i18n} = useTranslation()
     const socialsLinks = [
         `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <circle cx="30" cy="30" r="30" fill="#2C3765"/>
@@ -75,12 +77,12 @@ const Footer = () => {
             whileInView="visible"
             className={'bg-cloudburst py-12'}
         >
-            <div className="container flex">
-                <div className={'w-full flex items-center justify-between pb-14'}>
+            <div className="container flex max_md:flex-col">
+                <div className={'w-full flex items-center justify-between pb-14 max_md:pb-4'}>
                     <motion.div
                         variants={textTopAnimation}
                         custom={1}
-                        className={'flex items-center gap-3 text-xl text-cloudburst'}
+                        className={'flex items-center gap-3 text-xl text-cloudburst max_md:mx-auto'}
                     >
                         <img className={'w-[100px]'} src="/image/logo-dark.png" alt="logo"/>
                     </motion.div>
@@ -124,13 +126,13 @@ const Footer = () => {
                     </motion.div>
                 </div>
                 <div className={'mt-8 flex'}>
-                    <div>
+                    <div className={'max_md:text-center'}>
                         <motion.span
                             variants={textTopAnimation}
                             custom={1}
                             className={'text-whitesmoke font-[200]'}
                         >
-                            Обратитесь к нашим контактным данным и узнайте больше о наших услугах по консалтингу. Мы стремимся быть вашим надежным партнером в реализации бизнес-проектов и достижении ваших целей.
+                            {t('Please refer to our contact information and learn more about our consulting services. We strive to be your reliable partner in implementing business projects and achieving your goals')}
                         </motion.span>
                         {/*<div className={'mt-12 flex  gap-4'}>*/}
                         {/*    {socialsLinks.map((item, index)=> (*/}

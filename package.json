@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
+    "animated-number-react": "^0.1.2",
     "chart.js": "^4.4.1",
     "i18next": "^23.8.1",
     "react": "^18.2.0",

@@ -23,12 +23,12 @@ const Form = ({className, ...props}) => {
             <form
                 action="#"
                 onSubmit={handleSubmit}
-                className={'bg-whitesmoke px-[58px] py-[68px] flex flex-col gap-5'}
+                className={'bg-whitesmoke px-[58px] py-[68px] flex flex-col gap-5 max_sm:px-10 max_lit:px-5'}
             >
                 <MotionMainInput
                     variants={textLeftAnimation}
                     custom={2}
-                    placeholder={'Ваше имя'}
+                    placeholder={'Your name'}
                     type={'text'}
                 />
                 <MotionMainInput
@@ -40,13 +40,13 @@ const Form = ({className, ...props}) => {
                 <MotionMainInput
                     variants={textLeftAnimation}
                     custom={4}
-                    placeholder={'Телефон'}
+                    placeholder={'Telephone'}
                     type={'number'}
                 />
                 <MotionMainInput
                     variants={textRightAnimation}
                     custom={5}
-                    placeholder={'Дата'}
+                    placeholder={'Date'}
                     type={'date'}
                 />
                 <MotionMainTextArea
@@ -56,7 +56,7 @@ const Form = ({className, ...props}) => {
                 <MotionMainButton
                     variants={textRightAnimation}
                     custom={6}
-                    content={'Подтвердить'}
+                    content={'Confirm'}
                 />
             </form>
         </motion.div>

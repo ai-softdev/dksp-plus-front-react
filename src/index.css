@@ -196,9 +196,15 @@ body {
     font-family: 'Mulish';
 }
 
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .container {
     max-width:  1250px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 header {

@@ -1,12 +1,14 @@
 import React from 'react';
 import {forwardRef} from "react";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 const ChooseReason = forwardRef(({title, subtitle, ...props}, ref) => {
+    const {t, i18n} = useTranslation()
     return (
         <div
             ref={ref}
-            className={'flex gap-3 max-w-[500px]'}
+            className={'flex gap-3 max-w-[500px] max_sm:max-w-full'}
         >
             <div
                 className={'w-[32px] h-[32px]'}
@@ -18,10 +20,10 @@ const ChooseReason = forwardRef(({title, subtitle, ...props}, ref) => {
             </div>
             <div>
                 <p className={'text-cloudburst font-bold'}>
-                    {title}
+                    {t(title)}
                 </p>
                 <span className={'block text-mediumgray'}>
-                    {subtitle}
+                    {t(subtitle)}
                 </span>
             </div>
         </div>

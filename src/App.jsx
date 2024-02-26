@@ -7,8 +7,10 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Header/>
-        <AppRouter/>
+        <div className={'wrapper'}>
+            <Header/>
+            <AppRouter/>
+        </div>
     </BrowserRouter>
   )
 }

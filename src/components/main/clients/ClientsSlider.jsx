@@ -16,6 +16,20 @@ const ClientsSlider = forwardRef(({className, ...props}, ref) => {
         perMove: 1,
         gap: 10,
         speed: 300,
+        breakpoints: {
+            1230: {
+                perPage: 4,
+            },
+            940: {
+                perPage: 3,
+            },
+            730: {
+                perPage: 2,
+            },
+            530: {
+                perPage: 1,
+            }
+        }
     }
     const slideList = [
         '/image/clients/1.png',
@@ -35,7 +49,7 @@ const ClientsSlider = forwardRef(({className, ...props}, ref) => {
             >
                 {slideList.map((slide, index) => (
                     <SplideSlide key={index}>
-                        <img src={slide} className={'black-and-white'} alt=""/>
+                        <img src={slide} className={'black-and-white mx-auto'} alt=""/>
                     </SplideSlide>
                 ))}
             </Splide>
