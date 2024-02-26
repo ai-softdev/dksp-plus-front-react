@@ -12,17 +12,6 @@ import {motion, useScroll} from "framer-motion";
 
 const Main = () => {
     const { scrollYProgress } = useScroll()
-    useEffect(() => {
-        let arr = [3,4,5,6,7,3,3]
-        let num = ''
-        for(let i = 0; i < arr.length; i++){
-            for(let j = 0; j < arr[i]; j++){
-                num +=String(arr[i])
-            }
-            console.log(`${arr[i]} = ${num}`)
-            num = ''
-        }
-    }, []);
     return (
         <motion.div
             initial={{ opacity: 0 }}

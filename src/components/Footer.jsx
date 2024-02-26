@@ -84,7 +84,7 @@ const Footer = () => {
                         custom={1}
                         className={'flex items-center gap-3 text-xl text-cloudburst max_md:mx-auto'}
                     >
-                        <img className={'w-[100px]'} src="/image/logo-dark.png" alt="logo"/>
+                        <img className={'w-[100px]'} src="/image/logo-dark.webp" alt="logo"/>
                     </motion.div>
                     <motion.div
                         variants={textTopAnimation}

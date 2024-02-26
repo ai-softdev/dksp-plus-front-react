@@ -46,10 +46,9 @@ const Services = () => {
         <motion.section
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
-            className={'bg-whitesmoke'}
+            className={'bg-whitesmoke !py-20'}
         >
-            <div className={'container !py-20'}>
+            <div className={'container'}>
                 <MSubtitle
                     variants={textTopAnimation}
                     custom={1}
@@ -74,9 +73,7 @@ const Services = () => {
                 />
                 <div className={'grid grid-cols-3 grid-rows-2 gap-4 mt-10 max_lg:grid-cols-2 max_sm:grid-cols-1'}>
                     {servicesList.map((item, index) => (
-                        <MServicesCard
-                            variants={textLeftAnimation}
-                            custom={index +1}
+                        <ServicesCard
                             key={index}
                             svg={item.svg}
                             title={item.title}

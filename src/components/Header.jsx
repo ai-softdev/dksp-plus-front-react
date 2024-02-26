@@ -70,7 +70,7 @@ const Header = () => {
         >
             <div className={'container w-full flex items-center justify-between'}>
                 <div className={'flex items-center gap-3 text-xl text-cloudburst'}>
-                    <img className={'w-[210px] h-[60px] max_sm:w-[200px] max_sm:h-[60px]'} src="/image/logo-light-long.png" alt="logo"/>
+                    <img className={'w-[210px] h-[60px] max_sm:w-[200px] max_sm:h-[60px]'} src="/image/logo-light-long.webp" alt="logo"/>
                 </div>
                 <div className={'flex items-center gap-10'}>
                     {/*<SocialItem*/}
